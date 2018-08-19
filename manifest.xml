@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns="http://www.we7.cc" versionCode="">
+	<application setting="false">
+		<name><![CDATA[【网贷办卡】分销]]></name>
+		<identifie><![CDATA[wdbk_ff]]></identifie>
+		<version><![CDATA[3.2.0]]></version>
+		<type><![CDATA[business]]></type>
+		<ability><![CDATA[【网贷办卡】分销]]></ability>
+		<description><![CDATA[【网贷办卡】分销]]></description>
+		<author><![CDATA[网贷办卡]]></author>
+		<url><![CDATA[http://s.we7.cc/index.php?c=home&a=author&do=index&uid=59968]]></url>
+	</application>
+	<platform>
+        <!--订阅的消息类型-->
+		<subscribes>
+			<message type="text" />
+			<message type="image" />
+			<message type="voice" />
+			<message type="video" />
+			<message type="shortvideo" />
+			<message type="location" />
+			<message type="link" />
+			<message type="subscribe" />
+			<message type="unsubscribe" />
+			<message type="qr" />
+			<message type="trace" />
+			<message type="click" />
+			<message type="view" />
+			<message type="merchant_order" />
+			<message type="user_get_card" />
+			<message type="user_del_card" />
+			<message type="user_consume_card" />
+		</subscribes>
+
+        <!--直接处理的类型-->
+		<handles>
+			<message type="text" />
+			<message type="image" />
+			<message type="voice" />
+			<message type="video" />
+			<message type="shortvideo" />
+			<message type="location" />
+			<message type="link" />
+			<message type="subscribe" />
+			<message type="qr" />
+			<message type="trace" />
+			<message type="click" />
+			<message type="merchant_order" />
+			<message type="user_get_card" />
+			<message type="user_del_card" />
+			<message type="user_consume_card" />
+		</handles>
+
+        <!--如果需要嵌入规则, 那么此模块必须能够处理文本类型消息 (需要定义Processor)-->
+		<rule embed="true" />
+
+        <!--卡券功能-->
+		<card embed="true" />
+
+		<supports>
+			<!--公众号-->
+			<item type="app" />
+
+			<!--小程序-->
+			<item type="wxapp" />
+
+			<!--PC-->
+			<item type="webapp" />
+
+			<!--微擎首页-->
+			<item type="system_welcome" />
+		</supports>
+	</platform>
+	<bindings>
+        <!--功能封面-->
+		<cover>
+            <!--TODO: 不同应用之间不能设置相同的封面入口do名称 by veking 2018-01-27-->
+			<entry title="PC" do="pc" state="" direct="false" />
+			<entry title="手机端" do="home" state="" direct="false" />
+		</cover>
+
+        <!--后台管理：规则列表-->
+		<rule>
+			<entry title="首页" do="home" state="" direct="false" />
+		</rule>
+
+        <!--后台管理：管理中心菜单-->
+		<menu>
+			<entry title="首页" do="home" state="" direct="false" />
+		</menu>
+
+        <!--首页导航图标-->
+		<home>
+			<entry title="首页" do="home" state="" direct="false" />
+		</home>
+
+        <!--个人中心导航-->
+		<profile>
+			<entry title="首页" do="home" state="" direct="false" />
+		</profile>
+
+        <!--快捷功能导航-->
+		<shortcut>
+			<entry title="首页" do="home" state="" direct="false" />
+		</shortcut>
+
+        <!--独立功能-->
+		<function>
+			<entry title="首页" do="home" state="" direct="false" />
+		</function>
+
+        <!--小程序功能入口-->
+		<page>
+			<entry title="首页" do="/wdbk_ff/pages/index/index" state="" direct="" />
+			<entry title="发现" do="/wdbk_ff/pages/find/index" state="" direct="" />
+			<entry title="我的" do="/wdbk_ff/pages/my/index" state="" direct="" />
+		</page>
+
+        <!--微擎首页-->
+		<system_welcome>
+			<entry title="首页" do="home" state="" direct="false" />
+		</system_welcome>
+	</bindings>
+	<permissions>
+	</permissions>
+	<install><![CDATA[install.php]]></install>
+	<uninstall><![CDATA[uninstall.php]]></uninstall>
+	<upgrade><![CDATA[upgrade.php]]></upgrade>
+</manifest>
